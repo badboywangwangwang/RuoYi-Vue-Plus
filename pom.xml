@@ -443,6 +443,12 @@
                 <version>${revision}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.dromara</groupId>
+                <artifactId>ruoyi-pay</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
             <!--  工作流模块  -->
             <dependency>
                 <groupId>org.dromara</groupId>
@@ -471,6 +477,7 @@
         <module>ruoyi-modules</module>
         <!-- api模块 -->
         <module>ruoyi-api</module>
+        <module>ruoyi-pay</module>
     </modules>
     <packaging>pom</packaging>
 
