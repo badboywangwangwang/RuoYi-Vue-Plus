@@ -13,7 +13,7 @@ import jakarta.validation.constraints.*;
  * 法人信息业务对象 gan_pay_merchant
  *
  * @author Lion Li
- * @date 2026-08-11 03:02:09
+ * @date 2026-08-11 20:37:00
  */
 @Data
 @AutoMapper(target = GanPayMerchant.class, reverseConvertGenerate = false)
@@ -33,6 +33,11 @@ public class GanPayMerchantBo implements Serializable {
      */
     @NotBlank(message = "姓名不能为空", groups = { AddGroup.class, EditGroup.class })
     private String legalPersonName;
+
+    /**
+     * 关联城市
+     */
+    private Long cityId;
 
     /**
      * 手机号
@@ -78,11 +83,6 @@ public class GanPayMerchantBo implements Serializable {
      * 状态（0正常 1停用）
      */
     private String status;
-
-    /**
-     * 备注
-     */
-    private String remark;
 
 
 }

@@ -11,7 +11,7 @@ import java.io.Serial;
  * 法人信息对象 gan_pay_merchant
  *
  * @author Lion Li
- * @date 2026-08-11 03:02:09
+ * @date 2026-08-11 20:37:00
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
@@ -31,6 +31,11 @@ public class GanPayMerchant extends BaseEntity {
      * 姓名
      */
     private String legalPersonName;
+
+    /**
+     * 关联城市
+     */
+    private Long cityId;
 
     /**
      * 手机号

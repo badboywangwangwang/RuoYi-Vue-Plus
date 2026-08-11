@@ -26,7 +26,7 @@ import java.util.Collection;
  * 法人信息Service业务层处理
  *
  * @author Lion Li
- * @date 2026-08-11 03:02:09
+ * @date 2026-08-11 20:37:00
  */
 @Slf4j
 @RequiredArgsConstructor
@@ -76,6 +76,7 @@ public class GanPayMerchantServiceImpl implements IGanPayMerchantService {
     private LambdaQueryWrapper<GanPayMerchant> buildQueryWrapper(GanPayMerchantBo bo) {
         return QueryBuilder.lambda(GanPayMerchant.class)
             .likeIfText(GanPayMerchant::getLegalPersonName, bo.getLegalPersonName())
+            .eqIfText(GanPayMerchant::getStatus, bo.getStatus())
             .orderByAsc(GanPayMerchant::getMerchantId)
             .build();
     }

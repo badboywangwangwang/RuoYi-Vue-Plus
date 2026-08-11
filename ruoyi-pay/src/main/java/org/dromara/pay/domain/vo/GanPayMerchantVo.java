@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
  * 法人信息视图对象 gan_pay_merchant
  *
  * @author Lion Li
- * @date 2026-08-11 03:02:09
+ * @date 2026-08-11 20:37:00
  */
 @Data
 @ExcelIgnoreUnannotated
@@ -39,6 +39,18 @@ public class GanPayMerchantVo implements Serializable {
      */
     @ExcelProperty(value = "姓名")
     private String legalPersonName;
+
+    /**
+     * 关联城市
+     */
+    private Long cityId;
+
+    /**
+     * 关联城市
+     */
+    @ExcelProperty(value = "关联城市")
+    private Long cityName;
+
 
     /**
      * 手机号
@@ -94,12 +106,6 @@ public class GanPayMerchantVo implements Serializable {
     @ExcelProperty(value = "状态", converter = ExcelDictConvert.class)
     @ExcelDictFormat(dictType = "sys_normal_disable")
     private String status;
-
-    /**
-     * 备注
-     */
-    @ExcelProperty(value = "备注")
-    private String remark;
 
 
 }
